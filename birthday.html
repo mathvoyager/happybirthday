@@ -1,46 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your external CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на день рождения</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #8A2BE2; /* Фиолетовый */
+            color: white;
+            padding: 10px 0;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #FF69B4; /* Розовый */
+            color: white;
+            padding: 10px 0;
+            border-radius: 0 0 10px 10px;
+        }
+        .music {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <style>
-            p3 {
-                font-size: 25px
-            }
-        </style>
-       
-        <div class="logo">
-            <img src="AAA.png" alt="Logo" >
-            <p3>MathVoyager</p3>
+    <div class="container">
+        <div class="header">
+            <h1>Вы приглашены!</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="Untitled-1.html">Home</a></li>
-                <li><a href="Courses.html">Courses</a></li>
-                <li><a href="Contanct.html">Community</a></li>
-                <li><a href="MOCK.html">MOCK exam</a></li>
-                <li><a href="Articles.html">Spectrum</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="content">
+            <p>Присоединяйтесь к нам, чтобы отпраздновать день рождения нашей дочери!</p>
+            <p>Дата: 20 июля</p>
+            <p>Время: 14:00</p>
+            <p>Адрес: Абулхаир Хана 177, квартира 109</p>
+        </div>
+        <div class="footer">
+            <p>Мы надеемся вас увидеть!</p>
+        </div>
+        <div class="music">
+            <audio controls autoplay loop>
+                <source src="your-music-file.mp3" type="audio/mp3">
+                Ваш браузер не поддерживает аудио элемент.
+            </audio>
+        </div>
+    </div>
 </body>
-<body>
-    <br>
-    
-    <br>
-    <h1><a href="12grade.html" class="hello">12 Grade</a></h1>
-    <style>
-        h1 {
-            font-size: 30px;
-            font-family: 'Times New Roman', Times, serif;
-            
-        }
-        .hello {
-            color:rgb(163, 162, 168)  
-        }
-        .hello{  margin-left: 20px; }
-           
-    </style>
-    
-</body>
+</html>
