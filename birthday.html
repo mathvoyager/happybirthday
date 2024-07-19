@@ -6,7 +6,7 @@
     <title>Приглашение на день рождения</title>
     <style>
         body {
-            background: url('1712117563_bogatyr-club-ijhy-p-fonovie-otkritki-s-dnem-rozhdeniya-2.jpg') no-repeat center center fixed;
+            background: url('1712117563_bogatyr-club-ijhy-p-fonovie-otkritki-s-dnem-rozhdeniya-2.jpg') no-repeat center center fixed; /* Замените 'your-background-image.jpg' на путь к вашему фоновому изображению */
             background-size: cover;
             font-family: Arial, sans-serif;
             color: #333;
@@ -40,30 +40,19 @@
         .music {
             margin-top: 20px;
         }
-        .music input[type="checkbox"] {
-            display: none;
-        }
-        .music label {
-            display: inline-block;
+        .music button {
             background-color: #FF69B4; /* Розовый */
-            color: white;
+            color: rgb(255, 255, 255);
             border: none;
             border-radius: 50%;
             width: 100px;
             height: 100px;
             font-size: 20px;
-            line-height: 100px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        .music input[type="checkbox"]:checked + label {
+        .music button:hover {
             background-color: #51082f; /* Более темный розовый */
-        }
-        .music input[type="checkbox"]:checked ~ audio {
-            display: block;
-        }
-        audio {
-            display: none;
         }
         @media (max-width: 600px) {
             .container {
@@ -76,25 +65,30 @@
             .content {
                 padding: 10px;
             }
-            .music label {
+            .music button {
                 width: 70px;
                 height: 70px;
                 font-size: 16px;
-                line-height: 70px;
             }
         }
     </style>
+    <script>
+        function playMusic() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+            document.getElementById('play-button').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <div class="music">
-            <input type="checkbox" id="music-toggle">
-            <label for="music-toggle">Нажми</label>
-            <audio id="background-music" loop>
-                <source src="Masha_i_Medved_-_S_Dnem_Rozhdeniya_MENYA_74147456.mp3" type="audio/mp3">
-                Ваш браузер не поддерживает аудио элемент.
-            </audio>
+        <div id="play-button" class="music">
+            <button onclick="playMusic()">Нажми</button>
         </div>
+        <audio id="background-music" loop>
+            <source src="Masha_i_Medved_-_S_Dnem_Rozhdeniya_MENYA_74147456.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
         <div class="header">
             <h1>Вы приглашены!</h1>
         </div>
