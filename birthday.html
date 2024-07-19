@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,8 @@
             font-family: Arial, sans-serif;
             color: #333;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .container {
             max-width: 600px;
@@ -36,10 +39,55 @@
         .music {
             margin-top: 20px;
         }
+        .music button {
+            background-color: #FF69B4; /* Розовый */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .music button:hover {
+            background-color: #FF1493; /* Более темный розовый */
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 10px;
+            }
+            .header, .footer {
+                padding: 5px 0;
+            }
+            .content {
+                padding: 10px;
+            }
+            .music button {
+                width: 70px;
+                height: 70px;
+                font-size: 16px;
+            }
+        }
     </style>
+    <script>
+        function playMusic() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+            document.getElementById('play-button').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
+        <div id="play-button" class="music">
+            <button onclick="playMusic()">Нажми</button>
+        </div>
+        <audio id="background-music" loop>
+            <source src="Masha_i_Medved_-_S_Dnem_Rozhdeniya_MENYA_74147456.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
         <div class="header">
             <h1>Вы приглашены!</h1>
         </div>
@@ -51,12 +99,6 @@
         </div>
         <div class="footer">
             <p>Мы надеемся вас увидеть!</p>
-        </div>
-        <div class="music">
-            <audio controls autoplay loop>
-                <source src="your-music-file.mp3" type="audio/mp3">
-                Ваш браузер не поддерживает аудио элемент.
-            </audio>
         </div>
     </div>
 </body>
